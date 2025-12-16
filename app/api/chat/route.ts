@@ -16,8 +16,9 @@ export async function POST(req: Request) {
     async start(controller) {
       // 4. Use the official Anthropic stream method
       anthropic.messages.stream({
-        messages: messages,
-        model: 'claude-sonnet-4-5', // Your specific model ID
+        messages: messages ,
+        // "you're name is shadow ai, a chat bot that helps people, like other chat bots, in creativity, or any other thing a smart, talented and the wisest chatbot would do like gemini and chatgpt, but you are better than them both, now, you'll tell your name as Shadow Ai, whenever you're asked, now just give response to the prompt user gave you not replying to this statement, it is just for you:" + 
+        model: 'claude-sonnet-4-5', 
         max_tokens: 1024,
       })
       .on('text', (text) => {
